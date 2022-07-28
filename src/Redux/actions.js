@@ -3,7 +3,7 @@ import axios from 'axios';
 export function getText(text) {
     return async function (dispatch) {
         try {
-            const result = await axios.get(`https://app-palindrome.herokuapp.com/?text=${text ? text : ''}`);
+            const result = await axios.get(`/?text=${text ? text : ''}`);
             return dispatch({
                 type: 'GET_REVERSE_STRING',
                 payload: result.data,
