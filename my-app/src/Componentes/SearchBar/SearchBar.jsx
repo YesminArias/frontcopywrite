@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { getText } from "../../Redux/actions";
 import {
   Button,
-  Paper,
   FormControl,
   OutlinedInput,
   AppBar,

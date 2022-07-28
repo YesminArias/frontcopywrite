@@ -6,7 +6,7 @@ const inicialState = {
 function rootReducer(state = inicialState, action) {
 
     switch (action.type) {
-        case "GET_REVERSESTRING":
+        case "GET_REVERSE_STRING":
             return {
                 ...state,
                 historial: [...state.historial, action.payload],

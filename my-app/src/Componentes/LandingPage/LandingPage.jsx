@@ -1,11 +1,11 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import SearchBar from "../SearchBar/SearchBar";
 import { Card, Paper } from "@mui/material";
 import Alert from "@mui/material/Alert";
 
 export default function LandingPage() {
-  const dispatch = useDispatch();
+
   const textResult = useSelector((state) => state.historial);
 
   return (
@@ -48,7 +48,7 @@ export default function LandingPage() {
                   }}
                 >
                   {e.text}{" "}
-                  {e.palindrome == true ? (
+                  {e.palindrome === true ? (
                     <Alert severity="success">Palindrome</Alert>
                   ) : (
                     <Alert severity="error">No Palindrome</Alert>

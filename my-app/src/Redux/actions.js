@@ -4,10 +4,8 @@ export function getText(text) {
     return async function (dispatch) {
         try {
             const result = await axios.get(`http://localhost:3001/?text=${text ? text : ''}`);
-            console.log(result)
             return dispatch({
-
-                type: 'GET_REVERSESTRING',
+                type: 'GET_REVERSE_STRING',
                 payload: result.data,
             })
         } catch
