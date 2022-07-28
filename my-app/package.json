@@ -15,6 +15,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "from": "^0.1.7",
+    "heroku": "^7.60.2",
     "import": "^0.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -25,15 +26,18 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.4.1",
+    "serve": "^14.0.1",
     "styled-components": "^5.3.5",
     "thunk": "^0.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
-    
+    "test": "react-scripts test",
+    "heroku-postbuild": "npm run build",
+    "start": "serve -s build",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
